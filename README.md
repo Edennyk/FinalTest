@@ -10,7 +10,7 @@ ScreenShots
 1. Music Record list
 <img src="https://user-images.githubusercontent.com/59883982/106832765-4aa2aa00-6660-11eb-8a35-88aa431168d7.JPG">
 
-2. Add new musicRecords into musicRecord table 
+2. Add new musicRecords into musicRecord table and delete
 <img src ="https://user-images.githubusercontent.com/59883982/106832769-4b3b4080-6660-11eb-87b7-4c0c7dd83f63.JPG">
 
 3. Edit musciRecord 
