@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Create New Music</title>
+<style>
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+}
+
+
+.btn {
+    background-color: beige;
+    padding: 4px;
+    outline: none;
+    color: black;
+    width: 20%;
+    box-shadow: 8px 2px 4px -2px rgba(0,0,0,0.8);
+}
+
+</style>
+</head>
+<body>
+	<div align="center">
+		<h1>Create New Music</h1>
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${music}"
+			method="post">
+
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>MusicRecord Title:</td>
+					<td><input type="text" th:field="*{title}" /></td>
+				</tr>
+				<tr>
+					<td>Singer Name:</td>
+					<td><input type="text" th:field="*{singername}" /></td>
+				</tr>
+				<tr>
+					<td>Company Released:</td>
+					<td><input type="text" th:field="*{companyreleased}" /></td>
+				</tr>
+				<tr>
+					<td>Release Year:</td>
+					<td><input type="text" th:field="*{releaseYear}" /></td>
+				</tr>	
+				<tr>
+					<td>Language:</td>
+					<td><input type="text" th:field="*{language}" /></td>
+				</tr>
+				<tr>
+					<td>Price:</td>
+					<td><input type="text" th:field="*{price}" /></td>
+				</tr>								
+				<tr>
+					<td colspan="2"><button class="btn" type="submit">Save</button> </td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

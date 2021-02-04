@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Music Record Data</title>
+<style>
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+}
+</style>
+</head>
+<body>
+<div align="center">
+    <h1>Music List</h1>
+    <a href="new">Create New Music</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>MusicID</th>
+                <th>MusicTitle</th>
+                <th>Singer Name</th>
+                <th>Company Released</th>
+                <th>Release Year</th>
+                <th>Language</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="music : ${listMusics}">
+            	<td th:text="${music.id}">Music ID</td>
+                <td th:text="${music.title}">MusicTitle</td>
+                <td th:text="${music.singername}">Singer Name</td>
+                <td th:text="${music.companyreleased}">Company Released</td>
+                <td th:text="${music.releaseYear}">Release Year</td>
+                <td th:text="${music.language}">Language</td>
+                <td th:text="${music.price}">Price</td>
+                <td>
+                	<a th:href="@{'/edit/' + ${music.id}}">Edit</a>
+                	&nbsp;&nbsp;&nbsp;
+                	<a th:href="@{'/delete/' + ${music.id}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>    
+</body>
+</html> 
+
+
